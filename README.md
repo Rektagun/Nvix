@@ -39,7 +39,7 @@ $HOME
 		└── lua
 			└── init.lua
 			└── plugin
-				└── packer_compiled.lua
+				
 ```
 
 
@@ -121,7 +121,8 @@ To open nvim, type:
 nvim
 ```
 
-Now that `nvim` is open, you can see many keymappings, use them to navigate to the `plugins.vim` file, and uncomment the plugins you want to use (simply go on the line and use `:gcc` or `:gc` to comment/uncomment.
+Now that `nvim` is open, you might see an error, just hit Esc and run `:PlugInstall`, now quit nvim by `:q` and reopen it.<br> 
+You can see many keymappings, use them to navigate to the `plugins.vim` file, and uncomment the plugins you want to use (simply go on the line and use `:gcc` or `:gc` to comment/uncomment.
 After doing that, run `:w` and then `:source %` or `:so` , you can also just use `Ctrl+S` (which is one of the keymappings to save-source and go to Startify at the same time, hehe).
 
 ## Themes/Colorschemes
