@@ -45,6 +45,14 @@ $HOME
 
 
 ## Installation - Must read
+### Prerequisites:
+- <a href="https://github.com/junegunn/vim-plug?tab=readme-ov-filehttps://github.com/junegunn/vim-plug?tab=readme-ov-file"> vim-plug</a> as your pluggin manager.
+
+
+
+
+
+
 So the most forward way to clone a/the repo is to run this command in the HOME directory:
 ```bash
 git clone https://github.com/Rektagun/Nvix $HOME/.config/nvim
