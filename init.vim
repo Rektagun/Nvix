@@ -1,7 +1,10 @@
-source ~/.config/nvim/remap.vim
-source ~/.config/nvim/set.vim
+source ~\AppData\Local\nvim\remap.vim
+source ~\AppData\Local\nvim\set.vim
 
-call plug#begin('~/.local/share/nvim/plugged')
+" source ~\.config/nvim/remap.vim
+" source ~\.config/nvim/set.vim
+
+call plug#begin('~/vimfiles/autoload/plug')
 Plug 'rose-pine/neovim'
 Plug 'wbthomason/packer.nvim'
 Plug 'nvim-tree/nvim-web-devicons'

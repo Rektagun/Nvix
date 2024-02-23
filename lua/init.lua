@@ -16,7 +16,9 @@ end)
 -- Minimal config
 require("themery").setup({
   themes = {"gruvbox", "ayu"}, -- Your list of installed colorschemes
-  themeConfigFile = "~/.config/nvim/lua/theme.lua", -- Described below
+  -- themeConfigFile = "~/.config/nvim/lua/theme.lua", -- Described below
+
+  themeConfigFile = "~AppData\Local\nvim\lua\theme.lua", -- Described below
   livePreview = true, -- Apply theme while browsing. Default to true.
 })
 
