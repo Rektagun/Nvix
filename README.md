@@ -1,7 +1,6 @@
 <h1 align="center">NvIx</h1>
-
 <div align="center">
-	<a>HOME</a>
+	<a href="https://github.com/Rektagun/Nvix">HOME</a>
   <span> • </span>
     	<a href="https://github.com/Rektagun/Nvix/wiki">WIKI</a>
   <p></p>
