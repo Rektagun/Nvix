@@ -1,10 +1,10 @@
-source ~\AppData\Local\nvim\remap.vim
-source ~\AppData\Local\nvim\set.vim
+" source ~\AppData\Local\nvim\remap.vim
+" source ~\AppData\Local\nvim\set.vim
 
-" source ~\.config/nvim/remap.vim
-" source ~\.config/nvim/set.vim
+source ~/.config/nvim/remap.vim
+source ~/.config/nvim/set.vim
 
-call plug#begin('~/vimfiles/autoload/plug')
+call plug#begin('~/local/share/nvim/plugged')
 Plug 'rose-pine/neovim'
 Plug 'wbthomason/packer.nvim'
 Plug 'nvim-tree/nvim-web-devicons'
@@ -31,7 +31,7 @@ Plug 'hrsh7th/cmp-path'      " Source for file system paths
 Plug 'L3MON4D3/LuaSnip'      " Snippet engine
 Plug 'saadparwaiz1/cmp_luasnip'  " LuaSnip source for autocompletion
 Plug 'rafamadriz/friendly-snippets'  " Collection of snippets
-Plug 'NvChad/nvterm' " NvTerminal 
+" Plug 'NvChad/nvterm' " NvTerminal 
 Plug 'folke/tokyonight.nvim'
 Plug 'rktjmp/lush.nvim'
 Plug 'Shatur/neovim-ayu'
