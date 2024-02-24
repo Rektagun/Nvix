@@ -7,6 +7,7 @@ noremap <leader>ff :Telescope find_files<CR>
 " nnoremap <leader>v :CHADopen<cr>
 "
 " -- Nvim tree
+" nnoremap :Ex NvimTreeToggle
 nnoremap <leader>e :NvimTreeToggle<CR>
 " Use l to open files and directories in NvimTree
 " nnoremap <silent> <buffer> l :lua require'nvim-tree'.on_keypress('edit')<CR>

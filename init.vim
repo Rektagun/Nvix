@@ -43,6 +43,19 @@ Plug 'akinsho/toggleterm.nvim', {'tag' : '*'}
 
 call plug#end()
 
+
+let g:startify_lists = [
+    \ { 'type': 'files',     'header': ['   Recent Files'] },
+    \ { 'type': 'dir',       'header': ['   Current Directory'] },
+    \ { 'type': 'bookmarks', 'header': ['   Bookmarks'] },
+    \ { 'type': 'commands',  'header': ['   Commands'] },
+    \ ]
+
+
+
+
+
+
 lua << END
 require("toggleterm").setup()
 END
