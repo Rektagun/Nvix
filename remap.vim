@@ -24,7 +24,7 @@ nnoremap <leader>e :NvimTreeToggle<CR>
 " nnoremap <leader>nc :lua require('nvterm').close()<CR>
 
 " ToggleTerm
-nnoremap <leader>t :ToggleTerm direction=float<CR>
+nnoremap <leader>t :ToggleTerm direction=horizontal size=17<CR>
 " Use l to open files and directories in NvimTree
 
 

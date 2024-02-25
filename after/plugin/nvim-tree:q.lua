@@ -13,6 +13,10 @@ nvim_tree.setup({
       },
     },
   },
+  view = {
+    side = 'right', -- Position the NvimTree on the right side of the screen
+    width = 40,     -- Adjust the width of the NvimTree if needed
+  },
   -- disable window_picker for
   -- explorer to work well with
   -- window splits
