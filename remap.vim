@@ -4,6 +4,12 @@ let mapleader = "\<Space>"
 " noremap <leader>e :Ex<CR>
 noremap <leader>ff :Telescope find_files<CR>
 
+
+" Map <leader>a to append a new entry in harpoon list
+" nnoremap <silent> <leader>a :lua require('harpoon.ui').nav_file()<CR>
+" Map <C-e> to toggle the quick menu
+" nnoremap <leader>h require('harpoon.ui').toggle_quick_menu<CR>
+
 " nnoremap <leader>v :CHADopen<cr>
 "
 " -- Nvim tree

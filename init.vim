@@ -36,9 +36,8 @@ Plug 'folke/tokyonight.nvim'
 Plug 'rktjmp/lush.nvim'
 Plug 'Shatur/neovim-ayu'
 Plug 'akinsho/toggleterm.nvim', {'tag' : '*'}
-
-
-
+Plug 'nvim-lua/plenary.nvim'
+Plug 'ThePrimeagen/harpoon', { 'branch': 'harpoon2', 'do': { -> PlenaryCompile() } }
 
 
 call plug#end()
