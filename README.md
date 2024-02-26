@@ -1,8 +1,10 @@
 <div align="center">
 	<a href="https://github.com/Rektagun/Nvix">
-		<img src="https://github.com/Rektagun/Nvix/assets/99794571/d25d1f7d-87e6-408c-b08a-b384c621dcd4" width="200px"/>
+		<img src="https://github.com/Rektagun/Nvix/assets/99794571/948779d9-d8aa-40f3-bd41-2a9815c62180" width="200px"/>
 </a>
   </div>
+
+
 
 <div align="center">
 	<a href="https://github.com/Rektagun/Nvix">HOME</a>
