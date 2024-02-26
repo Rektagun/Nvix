@@ -8,7 +8,6 @@ require("themery").setup({
       vim.opt.background = "dark"
     ]],
   },
-  {
     name = "Gruvbox light",
     colorscheme = "gruvbox",
     before = [[

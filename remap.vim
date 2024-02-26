@@ -33,7 +33,12 @@ nnoremap <leader>e :NvimTreeToggle<CR>
 nnoremap <leader>t :ToggleTerm direction=horizontal size=17<CR>
 " Use l to open files and directories in NvimTree
 
+nnoremap <leader>q :qa!<CR>
 
+" Saving and stuff
+nnoremap <C-s> :w \| so \| Startify<CR>
+nnoremap <leader>p :w \| so \| PlugInstall<CR>
+" Use l to open files and directories in NvimTree
 " Saving and stuff
 nnoremap <C-s> :w \| so \| Startify<CR>
 " nnoremap <C-n> :Startify<CR>

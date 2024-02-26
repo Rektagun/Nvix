@@ -7,7 +7,6 @@
 :set softtabstop =4
 :set mouse =a
 
-
 set nocompatible
 set termguicolors
 filetype plugin indent on
