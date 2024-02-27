@@ -3,9 +3,9 @@ function ColorMyPencils(color)
 	-- vim.cmd.colorscheme(color)
 -- vim.cmd('colorscheme gruvbox')
 
--- vim.cmd('highlight Normal guibg=white ctermbg=none')
+-- vim.cmd('highlight Normal guibg=none ctermbg=none')
 
-	-- vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+	vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
 	-- vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
 
 -- end
@@ -77,7 +77,7 @@ require("rose-pine").setup({
 })
 
 
-vim.cmd("colorscheme materialbox")
+-- vim.cmd("colorscheme materialbox")
 -- vim.cmd("colorscheme archery ")
 -- vim.cmd("colorscheme rose-pine-moon")
 -- vim.cmd("colorscheme rose-pine-dawn")

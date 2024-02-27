@@ -5,7 +5,10 @@ source ~/.config/nvim/remap.vim
 source ~/.config/nvim/set.vim
 source ~/.config/nvim/plugins.vim
 
+" nvim_set_hl(0, "Normal", { bg = "none" })
 
+
+" let g:better_escape_interval = 50
 
 let g:startify_lists = [
     \ { 'type': 'files',     'header': ['   Recent Files'] },
@@ -22,25 +25,24 @@ let g:startify_lists = [
 " EOF
 
 
-
 lua << END
 require("toggleterm").setup()
 END
  
 colorscheme materialbox
 
-lua << END
-require('telescope').setup{
-    defaults = {
-        file_ignore_patterns = {}, -- Disable default file ignore patterns
-    },
-    extensions = {
-        fzf = {
-            hidden = true, -- Show hidden files and folders
-        }
-    }
-}
-END
+" lua << END
+" require('telescope').setup{
+"     defaults = {
+"         file_ignore_patterns = {}, -- Disable default file ignore patterns
+"     },
+"     extensions = {
+"         fzf = {
+"             hidden = true, -- Show hidden files and folders
+"         }
+"     }
+" }
+" END
 
 lua << END
 local cmp = require('cmp')

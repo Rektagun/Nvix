@@ -2,8 +2,8 @@ inoremap jk <Esc>
 
 let mapleader = "\<Space>"
 " noremap <leader>e :Ex<CR>
-noremap <leader>ff :Telescope find_files<CR>
-
+" noremap <leader>ff :Telescope find_files<CR>
+" nnoremap <leader>ff :fzf#run({'source': 'find .', 'sink': 'e'})<CR>
 
 " Map <leader>a to append a new entry in harpoon list
 " nnoremap <silent> <leader>a :lua require('harpoon.ui').nav_file()<CR>
@@ -18,7 +18,7 @@ nnoremap <leader>e :NvimTreeToggle<CR>
 " Use l to open files and directories in NvimTree
 " nnoremap <silent> <buffer> l :lua require'nvim-tree'.on_keypress('edit')<CR>
 " Use j to close NvimTree
-" nnoremap <silent> <buffer> h :lua require'nvim-tree'.on_keypress('close')<CR>
+" nnoremap <silent><buffer> h :lua require'nvim-tree'.on_keypress('close')<CR>
 " nnoremap <leader>s :bw<CR>
 
 " nnoremap <leader>nt :lua require('nvterm').open()<CR>
@@ -34,6 +34,8 @@ nnoremap <leader>t :ToggleTerm direction=horizontal size=17<CR>
 " Use l to open files and directories in NvimTree
 
 nnoremap <leader>q :qa!<CR>
+nnoremap <leader>ct :Calendar -view=clock<CR>
+
 
 " Saving and stuff
 nnoremap <C-s> :w \| so \| Startify<CR>

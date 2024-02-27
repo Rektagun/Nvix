@@ -5,6 +5,21 @@ call plug#begin('~/local/share/nvim/plugged')
 
 
 
+Plug 'rktjmp/shenzhen-solitaire.nvim'
+Plug 'alec-gibson/nvim-tetris'
+
+Plug 'jim-fx/sudoku.nvim'
+Plug 'ThePrimeagen/vim-be-good'
+Plug 'MunifTanjim/nui.nvim'
+" Plug 'mhinz/vim-grepper'
+Plug 'ggandor/leap.nvim'
+" Plug 'jdhao/better-escape.vim'
+Plug 'folke/noice.nvim'
+Plug 'MunifTanjim/nui.nvim'
+Plug 'nguyenvukhang/nvim-toggler'
+Plug 'jinh0/eyeliner.nvim'
+Plug 'jiangmiao/auto-pairs'
+Plug 'itchyny/calendar.vim'
 Plug 'rose-pine/neovim'
 Plug 'wbthomason/packer.nvim'
 Plug 'nvim-tree/nvim-web-devicons'
@@ -12,7 +27,7 @@ Plug 'mhinz/vim-startify'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'nvim-lua/plenary.nvim'
-Plug 'nvim-telescope/telescope.nvim'
+" Plug 'nvim-telescope/telescope.nvim'
 Plug 'morhetz/gruvbox'
 Plug 'nvim-tree/nvim-tree.lua'
 Plug 'http://github.com/tpope/vim-surround' " Surrounding ysw)
@@ -40,6 +55,7 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'ThePrimeagen/harpoon', { 'branch': 'harpoon2', 'do': { -> PlenaryCompile() } }
 " Plug 'akinsho/bufferline.nvim', { 'tag': '*' }
 Plug 'tpope/vim-fugitive'
-
+Plug 'mileszs/ack.vim'
+Plug 'junegunn/fzf.vim'
 
 call plug#end()
