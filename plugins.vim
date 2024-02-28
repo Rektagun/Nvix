@@ -57,5 +57,7 @@ Plug 'ThePrimeagen/harpoon', { 'branch': 'harpoon2', 'do': { -> PlenaryCompile()
 Plug 'tpope/vim-fugitive'
 Plug 'mileszs/ack.vim'
 Plug 'junegunn/fzf.vim'
+" Vim-Plug
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 call plug#end()

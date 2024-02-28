@@ -14,6 +14,8 @@ require('packer').startup(function()
     use 'nvim-lua/nvterm.nvim'
 end)
 -- Minimal config
+-- init.lua
+vim.g.coc_global_extensions = { 'coc-java' }
 
 
 require("themery").setup({

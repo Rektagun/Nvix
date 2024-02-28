@@ -29,7 +29,6 @@ lua << END
 require("toggleterm").setup()
 END
  
-colorscheme materialbox
 
 " lua << END
 " require('telescope').setup{

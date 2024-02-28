@@ -61,15 +61,20 @@ Windows: `` C:\Users\username\AppData\Local\nvim\init.vim ``
 
 And I am focusing on Linux/Unix/WSL
 
+
+ git commit amend -m "Amended the version of nvim (0.9.5); harpoon.lua to the directory structure"
+
 ```bash
 $HOME
 	└── /.config
 		└── init.vim
 		└── remap.vim
 		└── set.vim
+        └── plugins.vim 
 		└── after
 			└── plugins
 				└── colors.lua
+				└── harpoon.lua
 				└── nvim-comp.lua
 				└── nvim-tree.lua
 		└── lua
@@ -98,9 +103,9 @@ git clone https://github.com/neovim/neovim.git
 ```
 cd neovim
 ```
-##### Checkout stable version (0.9.1):
+##### Checkout stable version (0.9.5):
 ```
-git checkout v0.9.1
+git checkout v0.9.5
 ```
 ##### Build and install:
 ```
