@@ -70,6 +70,7 @@ $HOME
 		└── after
 			└── plugins
 				└── colors.lua
+				└── harpoon.lua
 				└── nvim-comp.lua
 				└── nvim-tree.lua
 		└── lua
@@ -98,9 +99,9 @@ git clone https://github.com/neovim/neovim.git
 ```
 cd neovim
 ```
-##### Checkout stable version (0.9.1):
+##### Checkout stable version (0.9.5):
 ```
-git checkout v0.9.1
+git checkout v0.9.5
 ```
 ##### Build and install:
 ```
