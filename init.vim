@@ -8,6 +8,24 @@ source ~/.config/nvim/plugins.vim
 " nvim_set_hl(0, "Normal", { bg = "none" })
 
 
+" Don't copy this example
+"
+
+lua <<EOF
+local lsp_zero = require('lsp-zero')
+
+lsp_zero.on_attach(function(client, bufnr)
+  -- see :help lsp-zero-keybindings
+  -- to learn the available actions
+lsp_zero.default_keymaps({buffer = bufnr})
+end)
+EOF
+
+
+
+
+
+
 " let g:better_escape_interval = 50
 
 let g:startify_lists = [
@@ -23,7 +41,8 @@ let g:startify_lists = [
 " lua << EOF
 " require("bufferline").setup{}
 " EOF
-
+"
+set guicursor+=n:block-Cursor
 
 lua << END
 require("toggleterm").setup()
@@ -41,6 +60,10 @@ END
 "         }
 "     }
 " }
+" END
+
+" lua << END
+" require("maps").show_popup()
 " END
 
 lua << END

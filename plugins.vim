@@ -3,11 +3,12 @@
 
 call plug#begin('~/local/share/nvim/plugged')
 
-
-
+Plug 'lewis6991/gitsigns.nvim'
+Plug 'mfussenegger/nvim-dap'
+Plug 'rcarriga/nvim-dap-ui'
 Plug 'rktjmp/shenzhen-solitaire.nvim'
 Plug 'alec-gibson/nvim-tetris'
-
+Plug 'BurntSushi/ripgrep'
 Plug 'jim-fx/sudoku.nvim'
 Plug 'ThePrimeagen/vim-be-good'
 Plug 'MunifTanjim/nui.nvim'
@@ -27,7 +28,7 @@ Plug 'mhinz/vim-startify'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'nvim-lua/plenary.nvim'
-" Plug 'nvim-telescope/telescope.nvim'
+Plug 'nvim-telescope/telescope.nvim'
 Plug 'morhetz/gruvbox'
 Plug 'nvim-tree/nvim-tree.lua'
 Plug 'http://github.com/tpope/vim-surround' " Surrounding ysw)
@@ -59,5 +60,24 @@ Plug 'mileszs/ack.vim'
 Plug 'junegunn/fzf.vim'
 " Vim-Plug
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'stevearc/dressing.nvim'
+"  Uncomment the two plugins below if you want to manage the language servers from neovim
+Plug 'williamboman/mason.nvim'
+Plug 'williamboman/mason-lspconfig.nvim'
+
+" LSP Support
+Plug 'neovim/nvim-lspconfig'
+" Autocompletion
+Plug 'hrsh7th/nvim-cmp'
+Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'L3MON4D3/LuaSnip'
+
+Plug 'VonHeikemen/lsp-zero.nvim', {'branch': 'v3.x'}
+
+
+
+
+
+
 
 call plug#end()

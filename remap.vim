@@ -9,7 +9,7 @@ let mapleader = "\<Space>"
 " nnoremap <silent> <leader>a :lua require('harpoon.ui').nav_file()<CR>
 " Map <C-e> to toggle the quick menu
 " nnoremap <leader>h require('harpoon.ui').toggle_quick_menu<CR>
-
+nnoremap <leader>sk :lua require('mix').show_popup()<CR>
 " nnoremap <leader>v :CHADopen<cr>
 "
 " -- Nvim tree
@@ -35,8 +35,12 @@ nnoremap <leader>t :ToggleTerm direction=horizontal size=17<CR>
 
 nnoremap <leader>q :qa!<CR>
 nnoremap <leader>ct :Calendar -view=clock<CR>
+nnoremap <C-d> <C-d>zz
+nnoremap <C-u> <C-u>zz
+nnoremap n nzzzv
+nnoremap N Nzzzv
 
-
+xnoremap <leader>p "_dP
 " Saving and stuff
 nnoremap <C-s> :w \| so \| Startify<CR>
 nnoremap <leader>p :w \| so \| PlugInstall<CR>
@@ -48,6 +52,19 @@ nnoremap <C-s> :w \| so \| Startify<CR>
 " nnoremap <C-n> :Startify<CR>
 "
 "
+
+
+nnoremap <leader>rc :!/home/scripts/compile_and_run.sh %<CR>
+
+
+
+
+
+
+
+
+
+
 nnoremap <leader>sv <C-w>v
 
 " Split window horizontally

@@ -8,6 +8,10 @@
 :set mouse =a
 
 
+
+
+
+
 " Set the color scheme
 " colorscheme habamax 
 
@@ -31,6 +35,7 @@ set guioptions-=L
 set guioptions-=R
 set guioptions-=T
 set guioptions-=B
+set guicursor+=n:block-Cursor
 
 set nocompatible
 set termguicolors
