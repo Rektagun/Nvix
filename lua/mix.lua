@@ -3,16 +3,22 @@ local M = {}
 function M.show_popup()
     -- 1. Create a scratch buffer, non listed that you can't open in a normal window
     local buf = vim.api.nvim_create_buf(false, true)
-    
     -- 2. Fill the buffer with some long text
-    vim.api.nvim_buf_set_lines(buf, 0, -1, false, {
+	vim.api.nvim_buf_set_lines(buf, 0, -1, false, { 
+		'					~Mapix~					',
+		'',
+		'',
+		'',
+		'',
+		'',
+		'',
+		'',
+		'',
+        'Explorer (NvimTree)			-> <Leader>e',
+        'Termimal						-> <Leader>t',
+	})
 
-        "					~Mapix~",
-        "							",
-        "Explorer (NvimTree)			-> <Leader>e",
-        "Termimal						-> <Leader>t",
-    })
-    
+
     -- 3. Calculate window size
     local width = vim.api.nvim_get_option("columns")
     local height = vim.api.nvim_get_option("lines")
@@ -67,3 +73,4 @@ function M.close_window()
 end
 
 return M
+

@@ -1,71 +1,31 @@
 inoremap jk <Esc>
-
 let mapleader = "\<Space>"
-" noremap <leader>e :Ex<CR>
 " noremap <leader>ff :Telescope find_files<CR>
-" nnoremap <leader>ff :fzf#run({'source': 'find .', 'sink': 'e'})<CR>
-
-" Map <leader>a to append a new entry in harpoon list
 " nnoremap <silent> <leader>a :lua require('harpoon.ui').nav_file()<CR>
-" Map <C-e> to toggle the quick menu
 " nnoremap <leader>h require('harpoon.ui').toggle_quick_menu<CR>
 nnoremap <leader>sk :lua require('mix').show_popup()<CR>
-" nnoremap <leader>v :CHADopen<cr>
-"
-" -- Nvim tree
-" nnoremap :Ex NvimTreeToggle
 nnoremap <leader>e :NvimTreeToggle<CR>
 " Use l to open files and directories in NvimTree
 " nnoremap <silent> <buffer> l :lua require'nvim-tree'.on_keypress('edit')<CR>
 " Use j to close NvimTree
 " nnoremap <silent><buffer> h :lua require'nvim-tree'.on_keypress('close')<CR>
 " nnoremap <leader>s :bw<CR>
-
-" nnoremap <leader>nt :lua require('nvterm').open()<CR>
-
-" Toggle nvterm floating window
-" nnoremap <leader>nt :lua require('nvterm').toggle()<CR>
-
-" Close nvterm floating window
-" nnoremap <leader>nc :lua require('nvterm').close()<CR>
-
-" ToggleTerm
 nnoremap <leader>t :ToggleTerm direction=horizontal size=17<CR>
-" Use l to open files and directories in NvimTree
-
 nnoremap <leader>q :qa!<CR>
 nnoremap <leader>ct :Calendar -view=clock<CR>
 nnoremap <C-d> <C-d>zz
 nnoremap <C-u> <C-u>zz
 nnoremap n nzzzv
 nnoremap N Nzzzv
-
 xnoremap <leader>p "_dP
-" Saving and stuff
 nnoremap <C-s> :w \| so \| Startify<CR>
 nnoremap <leader>p :w \| so \| PlugInstall<CR>
-" Use l to open files and directories in NvimTree
-" Saving and stuff
 nnoremap <C-s> :w \| so \| Startify<CR>
-" nnoremap <C-n> :Startify<CR>
-" Split window vertically
-" nnoremap <C-n> :Startify<CR>
-"
-"
-
-
 nnoremap <leader>rc :!/home/scripts/compile_and_run.sh %<CR>
-
-
-
-
-
-
-
-
-
-
 nnoremap <leader>sv <C-w>v
+nnoremap <leader>pp :e ~/.config/nvim/plugins.vim<CR>
+
+
 
 " Split window horizontally
 nnoremap <leader>sh <C-w>s
@@ -86,5 +46,5 @@ nnoremap <leader>tx :tabclose<CR>
 nnoremap <leader>tn :tabn<CR>
 
 " Go to previous tab
-" nnoremap <leader>tp :tabp<CR>
+nnoremap <leader>tp :tabp<CR>
 
