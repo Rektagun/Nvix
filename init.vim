@@ -3,7 +3,6 @@ source ~/.config/nvim/set.vim
 source ~/.config/nvim/plugins.vim
 source ~/.config/nvim/nvim-cmp.vim
 
-
 let g:startify_lists = [
     \ { 'type': 'dir',     'header': ['   This Directory:'] },
     \ { 'type': 'bookmarks', 'header': ['   Bookmarks'] },
@@ -13,6 +12,8 @@ let g:startify_lists = [
     \ { 'type': 'commands',  'header': ['   Commands'] },
     \ ]
 
+" Key bindings can be changed, see below
+call wilder#setup({'modes': [':', '/', '?']})
 
 lua << END
 require('toggleterm').setup{}
@@ -34,6 +35,15 @@ extensions = {
 	}
 }
 END
+
+
+function! PlaySound()
+  silent! exec '!afplay ~/.vim/support/my_typewriter_sound.aiff &'
+endfunction
+autocmd CursorMovedI * call PlaySound()
+
+
+
 
 let g:startify_custom_header = [ 
 \ '	/=========================================== W - E - L - L - C - O - M - E ============================================-\',
@@ -59,6 +69,7 @@ let g:startify_custom_header = [
 \ '	|																														|',
 \ '	-																														-',
 \ '	/------------------------------------------------| <leader> = Space |---------------------------------------------------\',
-\ '	\_____________| <leader>e : Explorer |~| <leader>sk : Mappings (Mix) |~| <leader>pp : Add plugins (Plugins.vim) |_______/',
+\ '	|_____________| <leader>e : Explorer |~| <leader>sk : Mappings (Mix) |~| <leader>pp : Add plugins (Plugins.vim) |_______|',
+\ '	\_____________| <leader>p : PlugInstall |~|_______/',
 \ ]
 

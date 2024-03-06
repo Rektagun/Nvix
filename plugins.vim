@@ -28,6 +28,7 @@ Plug 'ayu-theme/ayu-vim'
 Plug 'nvim-lua/popup.nvim'
 Plug 'marioortizmanero/adoc-pdf-live.nvim'
 
+
 Plug 'neovim/nvim-lspconfig'
 Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'hrsh7th/cmp-buffer'
@@ -40,5 +41,13 @@ Plug 'hrsh7th/vim-vsnip'
 Plug 'L3MON4D3/LuaSnip', {'tag': 'v2.*', 'do': 'make install_jsregexp'} " Replace <CurrentMajor> by the latest released major (first number of latest release)
 
 
+
+Plug 'dstein64/vim-startuptime'
+Plug 'timeyyy/orchestra.nvim'
+Plug 'ThePrimeagen/vim-be-good'
+Plug 'jim-fx/sudoku.nvim'
+Plug 'gelguy/wilder.nvim'
+Plug 'ray-x/web-tools.nvim'
+Plug 'folke/neodev.nvim'
 
 call plug#end()
