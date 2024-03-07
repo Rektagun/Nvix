@@ -1,5 +1,8 @@
 call plug#begin('~/local/share/nvim/plugged')
 
+
+
+Plug 'MunifTanjim/nui.nvim'
 Plug 'folke/zen-mode.nvim'
 Plug 'lewis6991/gitsigns.nvim'
 Plug 'jinh0/eyeliner.nvim'
@@ -40,14 +43,19 @@ Plug 'hrsh7th/cmp-vsnip'
 Plug 'hrsh7th/vim-vsnip'
 Plug 'L3MON4D3/LuaSnip', {'tag': 'v2.*', 'do': 'make install_jsregexp'} " Replace <CurrentMajor> by the latest released major (first number of latest release)
 
-
-
+Plug 'lukas-reineke/headlines.nvim'
+Plug 'michaelb/sniprun'
+Plug 'dhruvasagar/vim-table-mode'
+Plug 'nvim-orgmode/orgmode'
 Plug 'dstein64/vim-startuptime'
-Plug 'timeyyy/orchestra.nvim'
 Plug 'ThePrimeagen/vim-be-good'
 Plug 'jim-fx/sudoku.nvim'
 Plug 'gelguy/wilder.nvim'
 Plug 'ray-x/web-tools.nvim'
 Plug 'folke/neodev.nvim'
+Plug 'akinsho/org-bullets.nvim'
+
+
+
 
 call plug#end()

@@ -1,7 +1,11 @@
 lua <<EOF
 -- Set up nvim-cmp.
 local cmp = require'cmp'
-
+require('cmp').setup({
+  sources = {
+    { name = 'orgmode' }
+  }
+})
 cmp.setup({
 snippet = {
 	expand = function(args)

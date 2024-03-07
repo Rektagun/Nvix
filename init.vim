@@ -15,6 +15,10 @@ let g:startify_lists = [
 " Key bindings can be changed, see below
 call wilder#setup({'modes': [':', '/', '?']})
 
+lua << EOF
+require("headlines").setup()
+EOF
+
 lua << END
 require('toggleterm').setup{}
 END

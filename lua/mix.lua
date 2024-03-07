@@ -18,7 +18,7 @@ function M.show_popup()
         'Termimal						-> <Leader>t',
 	})
 
-
+  
     -- 3. Calculate window size
     local width = vim.api.nvim_get_option("columns")
     local height = vim.api.nvim_get_option("lines")
