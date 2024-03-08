@@ -13,7 +13,9 @@ let g:startify_lists = [
     \ ]
 
 " Key bindings can be changed, see below
-call wilder#setup({'modes': [':', '/', '?']})
+call wilder#setup({'modes': [':']})
+
+colorscheme "gruvbox"
 
 lua << EOF
 require("headlines").setup()
@@ -41,17 +43,13 @@ extensions = {
 END
 
 
-function! PlaySound()
-  silent! exec '!afplay ~/.vim/support/my_typewriter_sound.aiff &'
-endfunction
-autocmd CursorMovedI * call PlaySound()
 
 
 
 
 let g:startify_custom_header = [ 
-\ '	/=========================================== W - E - L - L - C - O - M - E ============================================-\',
-\ '	\_______________________________________________| github.com/Rektagun |_________________________________________________/',
+\ '	═══════════════════════════════════════════ W - E - L - L - C - O - M - E ═══════════════════════════════════════════',
+\ '	═════════════════════════════════════════════════ github.com/Rektagun ═══════════════════════════════════════════════',
 \ '	-										 																				-',
 \ '	|										 																				|',
 \ '	|		⠀⠀⠀⠀⠀⠀⠀⠀⠀ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⣴⣶⣿⣷⣶⣄⠀⠀⠀  ⠀⠀⠀⠀⠀⣠⣴⣶⣾⣿⣿⣶⣦⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣠⣴⠶⠖⠛⠶⢶⣤⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀ ⠀⠀⠀⠀⠀⠀⠀⠀⠀						|',

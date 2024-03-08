@@ -13,21 +13,25 @@ nnoremap <leader>e :NvimTreeToggle<CR>
 nnoremap <leader>t :ToggleTerm direction=horizontal size=17<CR>
 nnoremap <leader>q :qa!<CR>
 nnoremap <leader>w :w<CR>
+nnoremap <leader>s :so<CR>
 nnoremap <leader>ct :Calendar -view=clock<CR>
 nnoremap <C-d> <C-d>zz
 nnoremap <C-u> <C-u>zz
 nnoremap n nzzzv
 nnoremap N Nzzzv
 xnoremap <leader>p "_dP
-nnoremap <C-s> :w \| so \| Startify<CR>
+nnoremap <C-s> :w \| Startify<CR>
 nnoremap <leader>p :w \| so \| PlugInstall<CR>
 nnoremap <C-s> :w \| so \| Startify<CR>
 nnoremap <leader>rc :!/home/scripts/compile_and_run.sh %<CR>
 nnoremap <leader>sv <C-w>v
 nnoremap <leader>pp :e ~/.config/nvim/plugins.vim<CR>
+nnoremap <leader>rr :e ~/.config/nvim/remap.vim<CR>
+
+
+
+
 nnoremap <leader>vb :VimBeGood<CR>
-
-
 
 " Split window horizontally
 nnoremap <leader>sh <C-w>s

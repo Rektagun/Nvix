@@ -49,13 +49,11 @@ Plug 'dhruvasagar/vim-table-mode'
 Plug 'nvim-orgmode/orgmode'
 Plug 'dstein64/vim-startuptime'
 Plug 'ThePrimeagen/vim-be-good'
-Plug 'jim-fx/sudoku.nvim'
 Plug 'gelguy/wilder.nvim'
 Plug 'ray-x/web-tools.nvim'
 Plug 'folke/neodev.nvim'
 Plug 'akinsho/org-bullets.nvim'
-
-
+Plug 'dhruvasagar/vim-dotoo'
 
 
 call plug#end()
