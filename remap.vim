@@ -20,7 +20,7 @@ nnoremap <C-u> <C-u>zz
 nnoremap n nzzzv
 nnoremap N Nzzzv
 xnoremap <leader>p "_dP
-nnoremap <C-s> :w \| Startify<CR>
+nnoremap <C-s> :Startify<CR>
 nnoremap <leader>p :w \| so \| PlugInstall<CR>
 nnoremap <C-s> :w \| so \| Startify<CR>
 nnoremap <leader>rc :!/home/scripts/compile_and_run.sh %<CR>

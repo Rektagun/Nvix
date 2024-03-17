@@ -7,7 +7,7 @@ require('mason').setup{}
 
 -- Configure Mason LSP to automatically install some language servers.
 require("mason-lspconfig").setup {
-	ensure_installed = { "lua_ls", "vimls", "tsserver", "clangd" },
+	ensure_installed = { "lua_ls", "vimls", "tsserver", "clangd", "jdtls" },
 }
 
 -- Using 'cmp_nvim_lsp' to enhance LSP server capabilities with autocompletion features.
@@ -31,6 +31,9 @@ lspconfig.tsserver.setup({
 		includeInlayEnumMemberValueHints = true,
 	}
 })
+
+lspconfig.pyright.setup({})
+
 
 -- Setting up Lua language server with specific configurations beneficial for Lua development,
 -- especially for Neovim configuration files.
@@ -56,6 +59,9 @@ lspconfig.lua_ls.setup({
 		},
 	},
 })
+
+
+lspconfig.jdtls.setup({})
 
 -- Setting up Clangd without additional configuration, assuming default settings work well.
 lspconfig.clangd.setup({})
