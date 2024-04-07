@@ -14,40 +14,13 @@
 </div> 
 
 
+	This is still something of my own config
 
 
 ## What is Nvix?
 
 <b>Nvix</b> is a collection of the .config/nvim files that are used to customize neovim that I have configured and used by me.
 
-## Showcase
-
-#### Startify for the start screen, more about that over <a href="https://github.com/mhinz/vim-startify">Startify</a>
-
-![Screenshot (44)](https://github.com/Rektagun/Nvix/assets/99794571/91f18023-5882-4b74-a483-dfba9bd7e3ce)
-
-<br>
-
-
-#### ``<leader>e`` to open and close the file explorer, ``<Ctri+w> w`` to switch between open files and explorer
-
-![Screenshot (45)](https://github.com/Rektagun/Nvix/assets/99794571/89f98776-10e9-4a86-9975-d38aa5b825b4)
-
-<br>
-
-
-#### ``<leader>t`` to pull up the terminal. More about toggleterm here: <a href="https://github.com/akinsho/toggleterm.nvim">toggleterm</a>
-
-![Screenshot (46)](https://github.com/Rektagun/Nvix/assets/99794571/bf48d645-d7e6-4123-bdaa-1d32a209c75e)
-
-<br>
-
-
-#### Comes with the best colorscheme i.e. materialbox (use ``:colorscheme<Space><Tab>`` to see all colorschemes (you won't need to))
-
-![Screenshot (47)](https://github.com/Rektagun/Nvix/assets/99794571/f8c5488b-a257-41d6-9dbe-41567b618fca)
-
-<br>
 
 
 ## Directory structure
