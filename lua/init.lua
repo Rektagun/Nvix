@@ -19,9 +19,15 @@ require "lsp_signature".setup({
 	}
 })
 
+
+-- init.lua
+vim.keymap.set({ 'n', 'v' }, '<leader>cl', require('nvim-toggler').toggle)
+
+
 -- vim.cmd('colorscheme ayu')
 -- vim.cmd('AirlineTheme ayu')
 
+require('nvim-toggler').setup()
 
 -- require('session-lens').setup {
 --     path_display={'shorten'},
@@ -34,6 +40,16 @@ vim.g.expandtab = true
 -- 	log_level = "error",
 -- 	auto_session_suppress_dirs = { "~/", "~/Projects", "~/Downloads", "/"},
 -- }
+
+vim.opt.swapfile = false
+
+vim.keymap.set('n', '<c-h', ':wincmd h<CR>')
+-- vim.keymap.set('n', '<c-j', ':wincmd j<CR>')
+-- vim.keymap.set('n', '<c-k', ':wincmd k<CR>')
+vim.keymap.set('n', '<c-l', ':wincmd l<CR>')
+
+
+
 
 
 -- Neovide

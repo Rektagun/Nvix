@@ -27,6 +27,9 @@ set conceallevel=2
 set concealcursor=nc
 set shellslash
 
+" let g:airline#extensions#clock#updatetime = 1000
+" let g:airline_section_y = '%{strftime("%H:%M")}'
+
 
 
 let g:AutoPairsFlyMode = 1
