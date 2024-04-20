@@ -1,6 +1,22 @@
 
 
 call plug#begin('~/local/share/nvim/plugged')
+
+
+
+" Plug 'mhinz/vim-startify'
+Plug 'nvimdev/dashboard-nvim'
+
+
+" Plug 'SirVer/ultisnips'
+" Plug 'mlaursen/vim-react-snippets'
+" Plug 'honza/vim-snippets'
+Plug 'JoosepAlviste/nvim-ts-context-commentstring'
+Plug 'numToStr/Comment.nvim'
+Plug 'windwp/nvim-ts-autotag'
+Plug 'mfussenegger/nvim-lint'
+" Plug 'stevearc/conform.nvim'
+" Plug 'lukas-reineke/indent-blankline.nvim'
 Plug 'nguyenvukhang/nvim-toggler'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'iamcco/sran.nvim', { 'do': { -> sran#util#install() } }
@@ -15,14 +31,13 @@ Plug 'ellisonleao/gruvbox.nvim'
 " Plug 'roxma/nvim-yarp', { 'do': 'pip install -r requirements.txt' }
 Plug 'windwp/nvim-autopairs'
 Plug 'ray-x/lsp_signature.nvim'
-Plug 'christoomey/vim-tmux-navigator'
+" Plug 'christoomey/vim-tmux-navigator'
 Plug 'MunifTanjim/nui.nvim'
-Plug 'lewis6991/gitsigns.nvim'
+" Plug 'lewis6991/gitsigns.nvim'
 Plug 'itchyny/calendar.vim'
 Plug 'nvim-tree/nvim-web-devicons'
-Plug 'mhinz/vim-startify'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+" Plug 'vim-airline/vim-airline'
+" Plug 'vim-airline/vim-airline-themes'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-tree/nvim-tree.lua'

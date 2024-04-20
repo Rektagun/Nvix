@@ -8,9 +8,11 @@ require("mason-lspconfig").setup {
 		"clangd",
 		"cssls",
 		"vimls",
-		"eslint",
+		-- "eslint_lsp",
+		-- "eslint_d",
 		"kotlin_language_server",
 		"jdtls",
+        "emmet_ls",
 		"lua_ls",
 		"jsonls",
 		"html",
@@ -26,24 +28,41 @@ local lspconfig = require("lspconfig")
 
 capabilities.textDocument.completion.completionItem.snippetSupport = true
 
+--lspconfig.emmet_language_server.setup({
+--  filetypes = { "css", "html", "javascript", "javascriptreact" },
+--  init_options = {
+--    ---@type table<string, string>
+--    includeLanguages = {},
+--    --- @type string[]
+--    excludeLanguages = {},
+--    --- @type string[]
+--    extensionsPath = {},
+--    --- @type table<string, any> [Emmet Docs](https://docs.emmet.io/customization/preferences/)
+--    preferences = {},
+--    --- @type boolean Defaults to `true`
+--    showAbbreviationSuggestions = false,
+--    --- @type "always" | "never" Defaults to `"always"`
+--    showExpandedAbbreviation = "never",
+--    --- @type boolean Defaults to `false`
+--    showSuggestionsAsSnippets = false,
+--    --- @type table<string, any> [Emmet Docs](https://docs.emmet.io/customization/syntax-profiles/)
+--    syntaxProfiles = {},
+--    --- @type table<string, string> [Emmet Docs](https://docs.emmet.io/customization/snippets/#variables)
+--    variables = {},
+--  },
+--})
 
-
-require'lspconfig'.eslint.setup {
-	capabilities = capabilities,
-}
+--require'lspconfig'.emmet_ls.setup {
+--	capabilities = capabilities,
+--}
 
 require'lspconfig'.bashls.setup {
   capabilities = capabilities,
 }
 
-
 require'lspconfig'.kotlin_language_server.setup {
   capabilities = capabilities,
 }
-
--- require'lspconfig'.eslint_ls.setup {
---   capabilities = capabilities,
--- }
 
 require'lspconfig'.html.setup {
   capabilities = capabilities,

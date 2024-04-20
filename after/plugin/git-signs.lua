@@ -1,0 +1,10 @@
+-- require('gitsigns').setup {
+--   signs = {
+--     add          = { text = 'a' },
+--     change       = { text = 'c' },
+--     delete       = { text = 'd' },
+--     topdelete    = { text = '‾' },
+--     changedelete = { text = '~' },
+--     untracked    = { text = 'u' },
+--   },
+-- }

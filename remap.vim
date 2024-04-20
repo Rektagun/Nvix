@@ -14,9 +14,12 @@ nnoremap <leader>t :ToggleTerm direction=horizontal size=17<CR>
 nnoremap <leader>q :qa!<CR>
 nnoremap <leader>w :w<CR>
 
+nnoremap <leader>mm :MaximizerToggle<CR>
+" vnoremap <silent><F3> :MaximizerToggle<CR>gv
+" inoremap <silent><F3> <C-o>:MaximizerToggle<CR>
 
 
-nnoremap <leader>s :w \| :so<CR>
+nnoremap <leader>sf :w \| :so<CR>
 nnoremap <leader>ct :Calendar -view=clock<CR>
 " nnoremap <C-j> <C-d>zz
 " nnoremap <C-k> <C-u>zz
@@ -35,9 +38,30 @@ nnoremap <leader>rr :e ~/.config/nvim/remap.vim<CR>
 inoremap <C-j> <Esc>o
 
 
+" Enter insert mode at the end/start
+nnoremap <S-l> <S-a>
+nnoremap <S-h> <S-i>
+
+" Move right
+inoremap <C-l> <Right>
+
+" Tmux nav
+nnoremap <silent><C-h> :wincmd h<CR>
+nnoremap <silent><C-l> :wincmd l<CR>
+nnoremap <silent><C-d> :wincmd j<CR>
+nnoremap <silent><C-u> :wincmd k<CR>
+
+" Page up/down
+nnoremap <C-j> <C-d>zz
+nnoremap <C-k> <C-u>zz
+
+
+
+
 " indent the whole file
 nnoremap <leader>= mzG<S-v>gg=`z
-
+nnoremap <leader>sa G<S-v>gg
+nnoremap <silent><Esc> :nohlsearch<CR>
 
 
 " nnoremap <leader>vb :VimBeGood<CR>
