@@ -37,24 +37,7 @@ And I am focusing on Linux/Unix/WSL
 
  git commit amend -m "Amended the version of nvim (0.9.5); harpoon.lua to the directory structure"
 
-```bash
-$HOME
-	└── /.config
-		└── init.vim
-		└── remap.vim
-		└── set.vim
-        └── plugins.vim 
-		└── after
-			└── plugins
-				└── colors.lua
-				└── harpoon.lua
-				└── nvim-comp.lua
-				└── nvim-tree.lua
-		└── lua
-			└── init.lua
 
-				
-```
 
 
 
