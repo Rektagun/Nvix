@@ -1,21 +1,27 @@
-require('dashboard').setup({
-    theme = 'hyper',
-    shortcut_type = 'number',
-    config = {
-        packages = { enable = false },
-        week_header = {
-            enable = true,
-        },
-        shortcut = {
-            {
-                icon = ' ',
-                icon_hl = '@variable',
-                desc = 'Files',
-                group = 'Label',
-                action = 'Telescope find_files',
-                key = 'f',
-            },
-        },
-        mru = { limit = 15 },
-    }
-})
+-- require('dashboard').setup({
+--       logo = [[
+--          '.▄▄ · ▄▄▄·▐▄• ▄     .▄▄ ·▄• ▄▐▄• ▄ ',
+--          '▐█ ▀.▐█ ▀█ █▌█▌▪    ▐█ ▀.█▪██▌█▌█▌▪',
+--          '▄▀▀▀█▄█▀▀█ ·██·     ▄▀▀▀██▌▐█▌·██· ',
+--          '▐█▄▪▐▐█ ▪▐▪▐█·█▌    ▐█▄▪▐▐█▄█▪▐█·█▌',
+--          ' ▀▀▀▀ ▀  ▀•▀▀ ▀▀     ▀▀▀▀ ▀▀▀•▀▀ ▀▀',
+--          '',
+--   ]],
+--     theme = 'hyper',
+--     shortcut_type = 'number',
+--     config = {
+--         packages = { enable = false },
+--         week_header = { enable = true, },
+--         shortcut = {
+--             {
+--                 icon = ' ',
+--                 icon_hl = '@variable',
+--                 desc = 'Files',
+--                 group = 'Label',
+--                 action = 'Telescope find_files',
+--                 key = 'f',
+--             },
+--         },
+--         mru = { limit = 15 },
+--     }
+-- })

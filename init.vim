@@ -9,6 +9,10 @@ source ~/.config/nvim/startify.vim
 " highlight clear StatusLine
 " highlight clear StatusLineNC
 
+lua << EOF
+require('nvim-toggler').setup()
+EOF
+
 
 let g:maximizer_set_default_mapping = 1
 
@@ -107,24 +111,3 @@ EOF
             " \ ]
             "
             "
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

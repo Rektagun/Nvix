@@ -3,24 +3,25 @@ require('lsp-zero').preset({})
 require('mason').setup{}
 
 require("mason-lspconfig").setup {
-	ensure_installed = {
-		"tsserver",
-		"clangd",
-		"cssls",
-		"vimls",
-		-- "eslint_lsp",
-		-- "eslint_d",
-		"kotlin_language_server",
-		"jdtls",
-        "emmet_ls",
-		"lua_ls",
-		"jsonls",
-		"html",
-		"tailwindcss",
-		"bashls",
-	},
+  ensure_installed = {
+    "gopls",
+    "tsserver",
+    "clangd",
+    "cssls",
+    "vimls",
+    "kotlin_language_server",
+    "jdtls",
+    "emmet_ls",
+    "lua_ls",
+    "jsonls",
+    "html",
+    "tailwindcss",
+    "bashls",
+  },
 
 }
+
+
 
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
@@ -28,97 +29,123 @@ local lspconfig = require("lspconfig")
 
 capabilities.textDocument.completion.completionItem.snippetSupport = true
 
---lspconfig.emmet_language_server.setup({
---  filetypes = { "css", "html", "javascript", "javascriptreact" },
---  init_options = {
---    ---@type table<string, string>
---    includeLanguages = {},
---    --- @type string[]
---    excludeLanguages = {},
---    --- @type string[]
---    extensionsPath = {},
---    --- @type table<string, any> [Emmet Docs](https://docs.emmet.io/customization/preferences/)
---    preferences = {},
---    --- @type boolean Defaults to `true`
---    showAbbreviationSuggestions = false,
---    --- @type "always" | "never" Defaults to `"always"`
---    showExpandedAbbreviation = "never",
---    --- @type boolean Defaults to `false`
---    showSuggestionsAsSnippets = false,
---    --- @type table<string, any> [Emmet Docs](https://docs.emmet.io/customization/syntax-profiles/)
---    syntaxProfiles = {},
---    --- @type table<string, string> [Emmet Docs](https://docs.emmet.io/customization/snippets/#variables)
---    variables = {},
---  },
---})
 
---require'lspconfig'.emmet_ls.setup {
---	capabilities = capabilities,
---}
+-- lspconfig.gopls.setup {
+--     -- single_file_support = true,
+--     single_file_support = true,
+--     capabilities = capabilities,
+-- }
 
-require'lspconfig'.bashls.setup {
+lspconfig.bashls.setup {
+  -- single_file_support = true,
+  single_file_support = true,
   capabilities = capabilities,
 }
 
-require'lspconfig'.kotlin_language_server.setup {
+lspconfig.tailwindcss.setup ({
+ settings =  {
+    tailwindCSS = {
+      classAttributes = { "class", "className", "class:list", "classList", "ngClass" },
+      lint = {
+        cssConflict = "warning",
+        invalidApply = "error",
+        invalidConfigPath = "error",
+        invalidScreen = "error",
+        invalidTailwindDirective = "error",
+        invalidVariant = "error",
+        recommendedVariantOrder = "warning"
+      },
+      validate = true
+    }
+  },
+  single_file_support = true,
   capabilities = capabilities,
-}
-
-require'lspconfig'.html.setup {
-  capabilities = capabilities,
-}
-
-require'lspconfig'.cssls.setup {
-  capabilities = capabilities,
-}
-
-require'lspconfig'.kotlin_language_server.setup{}
-
-lspconfig.tsserver.setup({
-	single_file_support = true,
-  	capabilities = capabilities,
-	inlayHints = {
-		includeInlayParameterNameHints = "all",
-		includeInlayParameterNameHintsWhenArgumentMatchesName = true,
-		includeInlayFunctionParameterTypeHints = true,
-		includeInlayVariableTypeHints = true,
-		includeInlayPropertyDeclarationTypeHints = true,
-		includeInlayFunctionLikeReturnTypeHints = true,
-		includeInlayEnumMemberValueHints = true,
-	}
 })
 
-lspconfig.pyright.setup({})
+lspconfig.kotlin_language_server.setup {
+  -- single_file_support = true,
+  single_file_support = true,
+  capabilities = capabilities,
+}
+
+lspconfig.html.setup {
+  -- single_file_support = true,
+  single_file_support = true,
+  capabilities = capabilities,
+}
+
+lspconfig.cssls.setup {
+  -- single_file_support = true,
+  single_file_support = true,
+  capabilities = capabilities,
+}
+
+lspconfig.gopls.setup({
+  single_file_support = true,
+  capabilities = capabilities,
+  settings = {
+    gopls = {
+      analyses = {
+        unusedparams = true,
+      },
+      staticcheck = true,
+      gofumpt = true,
+    },
+  },
+})
+
+lspconfig.kotlin_language_server.setup{
+  single_file_support = true,
+  capabilities = capabilities,
+}
+
+lspconfig.tsserver.setup{
+  single_file_support = true,
+  capabilities = capabilities,
+}
+
+lspconfig.pyright.setup({
+  single_file_support = true,
+  capabilities = capabilities,
+})
 
 lspconfig.lua_ls.setup({
-	single_file_support = true,
-	settings = {
-		Lua = {
-			workspace = {
-				checkThirdParty = false,
-			},
-			completion = {
-				workspaceWord = true,
-				callSnippet = "Both",
-			},
-			diagnostics = {
-				disable = { "incomplete-signature-doc", "trailing-space" },
-				unusedLocalExclude = { "_*" },
-			},
-			format = {
-				enable = false,
-			},
-		},
-	},
+  -- single_file_support = false,
+  single_file_support = true,
+  settings = {
+    Lua = {
+      workspace = {
+        checkThirdParty = false,
+      },
+      completion = {
+        workspaceWord = true,
+        callSnippet = "Replace",
+      },
+      diagnostics = {
+        disable = { "incomplete-signature-doc", "trailing-space" },
+        unusedLocalExclude = { "_*" },
+      }, 
+      format = {
+        enable = true,
+      },
+    },
+  },
 })
 
-lspconfig.jdtls.setup({})
+lspconfig.jdtls.setup({
+  -- single_file_support = false,
+  single_file_support = true,
+  capabilities = capabilities
+})
 
-lspconfig.clangd.setup({})
+lspconfig.clangd.setup({
+  -- single_file_support = false,
+  single_file_support = true,
+  capabilities = capabilities
+})
 
 lspconfig.vimls.setup({
-	single_file_support = true,
-	capabilities = capabilities
+  -- single_file_support = false,
+  single_file_support = true,
+  capabilities = capabilities
 })
-
-

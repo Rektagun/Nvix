@@ -11,7 +11,10 @@ nnoremap <leader>e :NvimTreeToggle<CR>
 " nnoremap <silent><buffer> h :lua require'nvim-tree'.on_keypress('close')<CR>
 " nnoremap <leader>s :bw<CR>
 nnoremap <leader>t :ToggleTerm direction=horizontal size=17<CR>
-nnoremap <leader>q :qa!<CR>
+
+" nnoremap <leader>q :qa!<CR>
+"
+nnoremap <leader>q :w<CR>
 nnoremap <leader>w :w<CR>
 
 nnoremap <leader>mm :MaximizerToggle<CR>
@@ -19,12 +22,15 @@ nnoremap <leader>mm :MaximizerToggle<CR>
 " inoremap <silent><F3> <C-o>:MaximizerToggle<CR>
 
 
+
+
+
 nnoremap <leader>sf :w \| :so<CR>
 nnoremap <leader>ct :Calendar -view=clock<CR>
 " nnoremap <C-j> <C-d>zz
 " nnoremap <C-k> <C-u>zz
-nnoremap n nzzzv
-nnoremap N Nzzzv
+nnoremap n nzz
+nnoremap N Nzz
 " xnoremap <leader>p "_dP
 " nnoremap <C-s> :Startify<CR>
 nnoremap <leader>p :w \| so \| PlugInstall<CR>
@@ -88,3 +94,15 @@ nnoremap <leader>sx :close<CR>
 " " Go to previous tab
 " nnoremap <leader>tp :tabp<CR>
 
+
+
+lua << EOF
+-- Prime made me do it
+
+
+vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
+vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
+
+vim.keymap.set("n", "Q", "<nop>")
+
+EOF

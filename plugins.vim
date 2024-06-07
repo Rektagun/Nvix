@@ -3,12 +3,31 @@
 call plug#begin('~/local/share/nvim/plugged')
 
 
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'voldikss/vim-floaterm'
+" Plug 'folke/neodev.nvim'
+" Plug 'folke/tokyonight.nvim'
+" Plug 'jacoborus/tender.vim'
+Plug 'rose-pine/neovim'
+Plug 'davidosomething/vim-colors-meh'
+
+Plug 'rafamadriz/friendly-snippets'
+
+Plug 'kylechui/nvim-surround'
+
+
+" ES2015 code snippets (Optional)
+Plug 'epilande/vim-es2015-snippets'
+" React code snippets
+Plug 'epilande/vim-react-snippets'
+" Ultisnips
+Plug 'SirVer/ultisnips'
+
+Plug 'mlaursen/vim-react-snippets'
+
 
 " Plug 'mhinz/vim-startify'
-Plug 'nvimdev/dashboard-nvim'
-
-
-" Plug 'SirVer/ultisnips'
+" Plug 'nvimdev/dashboard-nvim'
 " Plug 'mlaursen/vim-react-snippets'
 " Plug 'honza/vim-snippets'
 Plug 'JoosepAlviste/nvim-ts-context-commentstring'
