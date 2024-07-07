@@ -21,7 +21,7 @@ nnoremap <leader>mm :MaximizerToggle<CR>
 " vnoremap <silent><F3> :MaximizerToggle<CR>gv
 " inoremap <silent><F3> <C-o>:MaximizerToggle<CR>
 
-
+nnoremap w 5w
 
 
 
@@ -65,7 +65,7 @@ nnoremap <C-k> <C-u>zz
 
 
 " indent the whole file
-nnoremap <leader>= mzG<S-v>gg=`z
+nnoremap <leader>= mzG<S-v>gg=`zzz
 nnoremap <leader>sa G<S-v>gg
 nnoremap <silent><Esc> :nohlsearch<CR>
 
@@ -96,13 +96,13 @@ nnoremap <leader>sx :close<CR>
 
 
 
-lua << EOF
--- Prime made me do it
+" -- lua << EOF
+" -- -- Prime made me do it
 
 
-vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
-vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
+" -- vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
+" -- vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
-vim.keymap.set("n", "Q", "<nop>")
+" -- vim.keymap.set("n", "Q", "<nop>")
 
-EOF
+" -- EOF

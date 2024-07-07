@@ -7,8 +7,7 @@ set shiftwidth =2
 set smarttab
 set softtabstop =2
 set mouse =a
-set textwidth=80
-set wrapmargin=2
+" set textwidth=80
 
 " Remove padding from all sides
 " set guioptions-=L
@@ -30,6 +29,9 @@ set fillchars=eob:┃
 set guicursor = ""
 set nocompatible
 set termguicolors
+set tw=80 
+set fo=cqt 
+set wm=0
 
 set foldmethod=expr
 set foldexpr=nvim_treesitter#foldexpr()

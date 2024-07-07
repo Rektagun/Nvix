@@ -1,6 +1,5 @@
 function ColorMyPencils(color) 
 
-
   require("gruvbox").setup({
     terminal_colors = true, -- add neovim terminal colors
     undercurl = false,
@@ -19,12 +18,11 @@ function ColorMyPencils(color)
     invert_tabline = false,
     invert_intend_guides = false,
     inverse = true, -- invert background for search, diffs, statuslines and errors
-    contrast = "hard", -- can be "hard", "soft" or empty string
+    contrast = " ", -- can be "hard", "soft" or empty string
     overrides = {},
     dim_inactive = false,
     transparent_mode = true,
   })
-
 
   -- require("tokyonight").setup({
   --     style = "night",
@@ -37,7 +35,6 @@ function ColorMyPencils(color)
   --         floats = "dark",
   --     },
   -- })
-
 
   require('rose-pine').setup({
     variant = "auto", -- auto, main, moon, or dawn
@@ -95,8 +92,8 @@ function ColorMyPencils(color)
   vim.o.background = "dark"
   -- vim.o.background = "light"
 
-  vim.cmd("colorscheme ayu")
-  -- vim.cmd("colorscheme gruvbox")
+  -- vim.cmd("colorscheme ayu")
+  vim.cmd("colorscheme gruvbox")
   -- vim.cmd("colorscheme rose-pine")
 
 end
@@ -109,7 +106,3 @@ ColorMyPencils()
 -- vim.cmd('colorscheme tender')
 -- vim.cmd('colorscheme gruvbox')
 -- vim.cmd('AirlineTheme gruvbox')
-
-
-
-

@@ -8,6 +8,7 @@ require("mason-lspconfig").setup {
     "tsserver",
     "clangd",
     "cssls",
+    -- "csharp_ls",
     "vimls",
     "kotlin_language_server",
     "jdtls",
@@ -16,6 +17,7 @@ require("mason-lspconfig").setup {
     "jsonls",
     "html",
     "tailwindcss",
+    "pyright",
     "bashls",
   },
 
@@ -28,6 +30,9 @@ local capabilities = require('cmp_nvim_lsp').default_capabilities()
 local lspconfig = require("lspconfig")
 
 capabilities.textDocument.completion.completionItem.snippetSupport = true
+
+
+require'lspconfig'.csharp_ls.setup{}
 
 
 -- lspconfig.gopls.setup {
