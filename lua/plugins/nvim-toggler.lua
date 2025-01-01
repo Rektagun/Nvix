@@ -10,6 +10,7 @@ return {
           ['yes'] = 'no',
           ['black'] = 'white',
           ['on'] = 'off',
+          ['before'] = 'after',
           ['left'] = 'right',
           ['up'] = 'down',
           ['=='] = '!=',
