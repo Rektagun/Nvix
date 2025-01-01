@@ -11,8 +11,50 @@ return {
       -- Set up NvimTree configuration
       nvim_tree.setup({
         view = {
-          side = 'right', -- Position the NvimTree on the right side of the screen
-          width = 35,     -- Adjust the width of the NvimTree if needed
+          centralize_selection = true,
+          cursorline = true,
+          debounce_delay = 15,
+          side = "right",
+          preserve_window_proportions = false,
+          number = false,
+          relativenumber = false,
+          signcolumn = "no",
+          width = 30,
+          float = {
+            enable = true,
+            quit_on_focus_loss = true,
+            open_win_config = {
+              relative = "editor",
+              border = "rounded",
+              width = 96,
+              height = 18,
+              row = 0,
+              col = 20,
+            },
+          },
+        },
+        renderer = {
+          indent_width = 2,
+          indent_markers = {
+            enable = true,
+            inline_arrows = true,
+            icons = {
+              corner = "└",
+              edge = "╎",
+              item = "├",
+              bottom = "─",
+              none = " ",
+            },
+          },
+          icons = {
+            git_placement = "after",
+            modified_placement = "after",
+            hidden_placement = "after",
+            diagnostics_placement = "signcolumn",
+            bookmarks_placement = "signcolumn",
+            padding = " ",
+            symlink_arrow = " ➞ ",
+          },
         },
         actions = {
           open_file = {

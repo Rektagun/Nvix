@@ -26,6 +26,7 @@ return {
         "cypher_ls",
         "graphql",
         "emmet_ls",
+        "eslint",
         "lua_ls",
         "jsonls",
         "html",
@@ -42,14 +43,85 @@ return {
 
     require'lspconfig'.csharp_ls.setup{}
 
+    lspconfig.eslint.setup {
+      single_file_support = true,
+      capabilities = capabilities,
+      ft = {
+        "javascript",
+        "javascriptreact",
+        "javascript.jsx",
+        "typescript",
+        "typescriptreact",
+        "typescript.tsx",
+        "vue",
+        "svelte",
+        "astro"
+      }
+    }
+
+    lspconfig.emmet_language_server.setup {
+      single_file_support = true,
+      capabilities = capabilities,
+      ft = {
+        "css",
+        "eruby",
+        "html",
+        "htmldjango",
+        "javascriptreact",
+        "less",
+        "pug",
+        "sass",
+        "scss",
+        "typescriptreact",
+        "htmlangular"
+      }
+    }
+
+
+    lspconfig.emmet_ls.setup {
+      single_file_support = true,
+      capabilities = capabilities,
+      ft = {
+        "astro",
+        "css",
+        "eruby",
+        "html",
+        "htmldjango",
+        "javascriptreact",
+        "less",
+        "pug",
+        "sass",
+        "scss",
+        "svelte",
+        "typescriptreact",
+        "vue",
+        "htmlangular"
+      }
+    }
+
     lspconfig.graphql.setup {
       single_file_support = true,
       capabilities = capabilities,
+      ft = {
+        "javascript",
+        "typescript",
+        "graphql",
+        "typescriptreact",
+        "javascriptreact"
+      } -- or 'event = "VeryLazy"'
     }
 
     lspconfig.cypher_ls.setup {
       single_file_support = true,
       capabilities = capabilities,
+      ft = {
+        "cypher",
+        "javascript",
+        "typescript",
+        "graphql",
+        "typescriptreact",
+        "javascriptreact"
+      } -- or 'event = "VeryLazy"'
     }
 
     lspconfig.bashls.setup {
@@ -80,6 +152,14 @@ return {
     lspconfig.ts_ls.setup{
       single_file_support = true,
       capabilities = capabilities,
+      ft = {
+        "javascript",
+        "javascriptreact",
+        "javascript.jsx",
+        "typescript",
+        "typescriptreact",
+        "typescript.tsx"
+      }
     }
 
     lspconfig.pyright.setup({
