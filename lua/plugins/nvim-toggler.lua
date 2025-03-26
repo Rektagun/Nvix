@@ -6,6 +6,8 @@ return {
         -- your own inverses
         inverses = {
           ['vim'] = 'emacs',
+          ['row'] = 'col',
+          ['flex'] = 'grid',
           ['true'] = 'false',
           ['yes'] = 'no',
           ['black'] = 'white',

@@ -9,6 +9,8 @@ vim.opt.signcolumn = "no"
 vim.opt.number = true
 vim.opt.relativenumber = true
 
+vim.opt.clipboard = "unnamedplus"
+
 -- Indentation
 vim.opt.autoindent = true
 vim.opt.tabstop = 2

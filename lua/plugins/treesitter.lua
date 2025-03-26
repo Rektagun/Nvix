@@ -1,38 +1,67 @@
 return {
   {
     "nvim-treesitter/nvim-treesitter",
+    "windwp/nvim-ts-autotag",
+    "nvim-treesitter/nvim-treesitter-refactor",
+    -- "nvim-treesitter/nvim-treesitter-context",
     build = ":TSUpdate",
-    config = function ()
 
-      require'nvim-treesitter.configs'.setup {
-        -- A list of parser names, or "all" (the listed parsers MUST always be installed)
-        ensure_installed = { "c", "lua", "vim", "vimdoc", "query", "markdown", "markdown_inline", "typescript", "python", "html" },
-
-
-        -- autotag = {
-        --   enable = true
-        -- },
-
-        -- Automatically install missing parsers when entering buffer
-        -- Recommendation: set to false if you don't have `tree-sitter` CLI installed locally
-        auto_install = false,
-
-        ---- If you need to change the installation directory of the parsers (see -> Advanced Setup)
-        -- parser_install_dir = "/some/path/to/store/parsers", -- Remember to run vim.opt.runtimepath:append("/some/path/to/store/parsers")!
-
+    config = function()
+      require 'nvim-treesitter.configs'.setup {
+        ensure_installed = "all",
+        sync_install = false,
+        auto_install = true,
         highlight = {
           enable = true,
-
-          disable = function(lang, buf)
-            local max_filesize = 100 * 1024 -- 100 KB
-            local ok, stats = pcall(vim.loop.fs_stat, vim.api.nvim_buf_get_name(buf))
-            if ok and stats and stats.size > max_filesize then
-              return true
-            end
-          end,
-
-          additional_vim_regex_highlighting = true,
+          disable = { "c", "rust" },
+          additional_vim_regex_highlighting = false,
         },
+        rainbow = {
+          enable = true,
+          disable = { 'jsx', 'cpp' },
+          query = 'rainbow-parens',
+          strategy = require('ts-rainbow').strategy.global,
+        },
+        refactor = {
+          highlight_current_scope = { enable = true },
+          smart_rename = {
+            enable = true,
+            -- Assign keymaps to false to disable them, e.g. `smart_rename = false`.
+            keymaps = {
+              smart_rename = "grr",
+            },
+          },
+        },
+      }
+
+      -- require 'treesitter-context'.setup {
+      --   enable = true,           -- Enable this plugin (Can be enabled/disabled later via commands)
+      --   multiwindow = false,     -- Enable multiwindow support.
+      --   max_lines = 1,           -- How many lines the window should span. Values <= 0 mean no limit.
+      --   min_window_height = 0,   -- Minimum editor window height to enable context. Values <= 0 mean no limit.
+      --   line_numbers = true,
+      --   multiline_threshold = 1, -- Maximum number of lines to show for a single context
+      --   trim_scope = 'outer',    -- Which context lines to discard if `max_lines` is exceeded. Choices: 'inner', 'outer'
+      --   mode = 'cursor',         -- Line used to calculate context. Choices: 'cursor', 'topline'
+      --   -- Separator between context and content. Should be a single character string, like '-'.
+      --   -- When separator is set, the context will only show up when there are at least 2 lines above cursorline.
+      --   separator = nil,
+      --   zindex = 20,     -- The Z-index of the context window
+      --   on_attach = nil, -- (fun(buf: integer): boolean) return false to disable attaching
+      -- }
+
+      require('nvim-ts-autotag').setup {
+        opts = {
+          -- Defaults
+          enable_close = true,          -- Auto close tags
+          enable_rename = true,         -- Auto rename pairs of tags
+          enable_close_on_slash = false -- Auto close on trailing </
+        },
+        per_filetype = {
+          ["html"] = {
+            enable_close = false
+          }
+        }
       }
     end
   }

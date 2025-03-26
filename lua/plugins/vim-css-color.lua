@@ -1,9 +1,9 @@
 return {
   {
-    "ap/vim-css-color" ,
+    "ap/vim-css-color",
     config = function()
       local wilder = require('wilder')
-      wilder.setup({modes = {':', '/', '?'}})
+      wilder.setup({ modes = { ':', '/', '?' } })
     end
   }
 }
