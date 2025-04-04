@@ -5,7 +5,6 @@ return {
     require("themery").setup({
 
       themes = { 'rose-pine',
-        'gruvbox',
         'ayu', 'tokyonight',
         'catppuccin-mocha',
         'gruvbox-material', 'meh', 'kanagawa', 'kanagawa-paper', 'rasmus', 'evergarden', 'newpaper', 'material',

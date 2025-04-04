@@ -18,7 +18,7 @@ return {
         styles = {
           bold = true,
           italic = true,
-          transparency = false,
+          transparency = true,
         },
 
         groups = {
@@ -79,7 +79,7 @@ return {
       })
     end
   },
-  { 'ellisonleao/gruvbox.nvim',            config = function() end },
+  -- { 'ellisonleao/gruvbox.nvim',            config = function() end },
   { 'Luxed/ayu-vim',                       name = 'ayu',              config = function() end },
   { 'folke/tokyonight.nvim',               name = 'tokyonight',       config = function() end },
   { 'catppuccin/nvim',                     name = 'catppuccin',       config = function() end },
