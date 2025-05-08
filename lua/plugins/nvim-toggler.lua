@@ -5,20 +5,30 @@ return {
       require('nvim-toggler').setup({
         -- your own inverses
         inverses = {
+          ['=='] = '!=',
           ['vim'] = 'emacs',
           ['row'] = 'col',
           ['flex'] = 'grid',
           ['true'] = 'false',
+          ['True'] = 'False',
           ['yes'] = 'no',
           ['black'] = 'white',
           ['on'] = 'off',
+          ['On'] = 'Off',
           ['before'] = 'after',
+          ['Before'] = 'After',
           ['left'] = 'right',
           ['up'] = 'down',
-          ['=='] = '!=',
-          ['True'] = 'False',
+          ['Up'] = 'Down',
           ['top'] = 'bottom',
+          ['Top'] = 'Bottom',
+          ['in'] = 'out',
+          ['In'] = 'Out',
+          ['and'] = 'or',
+          ['And'] = 'Or',
+          ['AND'] = 'OR',
         },
+
         -- removes the default <leader>i keymap
         remove_default_keybinds = true,
         -- removes the default set of inverses

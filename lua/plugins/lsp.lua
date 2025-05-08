@@ -87,5 +87,10 @@ return {
       single_file_support = true,
       capabilities = capabilities
     })
+
+    lspconfig.pyright.setup({
+      single_file_support = true,
+      capabilities = capabilities
+    })
   end
 }

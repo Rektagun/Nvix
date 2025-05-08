@@ -1,4 +1,5 @@
 return {
+
   {
     'rose-pine/neovim',
     name = 'rose-pine',
@@ -16,17 +17,17 @@ return {
         },
 
         styles = {
-          bold = true,
+          bold = false,
           italic = true,
           transparency = true,
         },
 
         groups = {
-          border = "muted",
-          link = "iris",
-          panel = "surface",
+          border = "rose",
+          link = "rose",
+          panel = "rose",
 
-          error = "love",
+          error = "muted",
           hint = "iris",
           info = "foam",
           note = "pine",
@@ -79,84 +80,87 @@ return {
       })
     end
   },
-  -- { 'ellisonleao/gruvbox.nvim',            config = function() end },
-  { 'Luxed/ayu-vim',                       name = 'ayu',              config = function() end },
-  { 'folke/tokyonight.nvim',               name = 'tokyonight',       config = function() end },
-  { 'catppuccin/nvim',                     name = 'catppuccin',       config = function() end },
-  { 'sainnhe/gruvbox-material',            name = 'gruvbox-material', config = function() end },
-  { 'davidosomething/vim-colors-meh',      name = 'meh',              config = function() end },
-  { 'rebelot/kanagawa.nvim',               name = 'kanagawa',         config = function() end },
-  -- { 'sho-87/kanagawa-paper.nvim',          name = 'kanagawa-paper',   config = function() end },
-  { 'kvrohit/rasmus.nvim',                 name = 'rasmus',           config = function() end },
-  { 'comfysage/evergarden',                name = 'evergarden',       config = function() end },
-  { 'yorik1984/newpaper.nvim',             name = 'newpaper',         config = function() end },
-  { 'marko-cerovac/material.nvim',         name = 'material',         config = function() end },
-  { 'kdheepak/monochrome.nvim',            name = 'monochrome',       config = function() end },
-  { 'sainnhe/everforest',                  name = 'everforest',       config = function() end },
-  { 'FrenzyExists/aquarium-vim',           name = 'aquarium',         config = function() end },
-  { 'dunstontc/vim-vscode-theme',          name = 'dark_plus',        config = function() end },
-  { 'yuttie/inkstained-vim',               name = 'inkstained',       config = function() end },
-  { 'ramojus/mellifluous.nvim',            name = 'mellifluous',      config = function() end },
-  { 'xero/miasma.nvim',                    name = 'miasma',           config = function() end },
-  { 'qaptoR-nvim/chocolatier.nvim',        name = 'chocolatier',      config = function() end },
-  { 'habamax/vim-polar',                   name = 'polar',            config = function() end },
-  { 'jeetsukumaran/vim-nefertiti',         name = 'nefertiti',        config = function() end },
-  { 'rayes0/blossom.vim',                  name = 'blossom',          config = function() end },
-  { 'kxzk/skull-vim',                      name = 'skull',            config = function() end },
-  { 'clinstid/eink.vim',                   name = 'eink',             config = function() end },
-  { 'echasnovski/mini.base16',             name = 'mini.base16',      config = function() end },
-  { 'almo7aya/neogruvbox.nvim',            name = 'neogruvbox',       config = function() end },
-  { 'mikesmithgh/gruvsquirrel.nvim',       name = 'gruvsquirrel',     config = function() end },
-  { 'alxhnr/clear_colors',                 name = 'clear_colors',     config = function() end },
-  -- { 'a5hk/night-coder', name = 'night-coder', config = function() end },
-  { 'emhaye/ceudah.vim',                   name = 'ceudah',           config = function() end },
-  { 'junegunn/seoul256.vim',               name = 'seoul256',         config = function() end },
-  { 'overvale/vacme',                      name = 'vacme',            config = function() end },
-  { 'ilof2/posterpole.nvim',               name = 'posterpole',       config = function() end },
-  { 'baskerville/bubblegum',               name = 'bubblegum',        config = function() end },
-  { 'huyvohcmc/atlas.vim',                 name = 'atlas',            config = function() end },
-  { 'kaiuri/nvim-juliana',                 name = 'juliana',          config = function() end },
-  { 'bettervim/yugen.nvim',                name = 'yugen',            config = function() end },
-  { 'karoliskoncevicius/sacredforest-vim', name = 'sacredforest',     config = function() end },
-  { 'verf/deepwhite.nvim',                 name = 'deepwhite',        config = function() end },
-  { 'alessandroyorba/despacio',            name = 'despacio',         config = function() end },
-  { 'ahmedabdulrahman/aylin.vim',          name = 'aylin',            config = function() end },
-  { 'yorickpeterse/vim-paper',             name = 'paper',            config = function() end },
-  -- { 'mswift42/vim-themes', name = 'themes', config = function() end },
-  { 'vague2k/vague.nvim',                  name = 'vague',            config = function() end },
-  { 'pbrisbin/vim-colors-off',             name = 'off',              config = function() end },
-  { 'lunacookies/vim-substrata',           name = 'substrata',        config = function() end },
-  { 'lokaltog/vim-distinguished',          name = 'distinguished',    config = function() end },
-  { 'jaredgorski/fogbell.vim',             name = 'fogbell',          config = function() end },
-  { 'lokaltog/vim-monotone',               name = 'monotone',         config = function() end },
-  { 'nvimdev/oceanic-material',            name = 'oceanic_material', config = function() end },
-  { 'eddyekofo94/gruvbox-flat.nvim',       name = 'gruvbox-flat',     config = function() end },
-  { 'franbach/miramare',                   name = 'miramare',         config = function() end },
-  -- { '0xstepit/flow.nvim', name = 'flow', config = function() end },
-  { 'chriskempson/vim-tomorrow-theme',     name = 'tomorrow',         config = function() end },
-  { 'rhysd/vim-color-spring-night',        name = 'spring-night',     config = function() end },
-  { 'ribru17/bamboo.nvim',                 name = 'bamboo',           config = function() end },
-  -- { 'doums/darcula', name = 'darcula', config = function() end },
-  { 'alessandroyorba/alduin',              name = 'alduin',           config = function() end },
-  { 'lifepillar/vim-gruvbox8',             name = 'gruvbox8',         config = function() end },
-  { 'kristijanhusak/vim-hybrid-material',  name = 'hybrid_material',  config = function() end },
-  { 'mofiqul/vscode.nvim',                 name = 'vscode',           config = function() end },
-  { 'srcery-colors/srcery-vim',            name = 'srcery',           config = function() end },
-  { 'romainl/apprentice',                  name = 'apprentice',       config = function() end },
-  { 'xero/sourcerer.vim',                  name = 'sourcerer',        config = function() end },
-  { 'kkga/vim-envy',                       name = 'envy',             config = function() end },
-  { 'zefei/cake16',                        name = 'cake16',           config = function() end },
-  { 'daschw/leaf.nvim',                    name = 'leaf',             config = function() end },
-  { 'habamax/vim-gruvbit',                 name = 'gruvbit',          config = function() end },
-  -- { 'lmburns/kimbox', name = 'kimbox', config = function() end },
-  { 'fenetikm/falcon',                     name = 'falcon',           config = function() end },
-  { 'nyoom-engineering/oxocarbon.nvim',    name = 'oxocarbon',        config = function() end },
-  { 'gkapfham/vim-vitamin-onec',           name = 'vitaminonec',      config = function() end },
-  { 'jaywilliams/vim-vwilight',            name = 'vwilight',         config = function() end },
-  { 'vivkin/flatland.vim',                 name = 'flatland',         config = function() end },
-  { 'juanedi/predawn.vim',                 name = 'predawn',          config = function() end },
-  { 'scttymn/vim-twilight',                name = 'twilight',         config = function() end },
-  { 'lunacookies/vim-plan9',               name = 'plan9',            config = function() end },
-  { 'whatsthatsmell/codesmell_dark.vim',   name = 'codesmell_dark',   config = function() end },
-  { 'dgox16/oldworld.nvim',                name = 'oldworld',         config = function() end },
+
+
+  {
+    'ellisonleao/gruvbox.nvim',
+    config = function()
+      require("gruvbox").setup({
+        terminal_colors = true, -- add neovim terminal colors
+        undercurl = true,
+        underline = true,
+        bold = false,
+        italic = {
+          strings = false,
+          emphasis = false,
+          comments = true,
+          operators = false,
+          folds = true,
+        },
+        strikethrough = true,
+        invert_selection = false,
+        invert_signs = false,
+        invert_tabline = false,
+        invert_intend_guides = false,
+        inverse = true, -- invert background for search, diffs, statuslines and errors
+        contrast = "",  -- can be "hard", "soft" or empty string
+        palette_overrides = {},
+        overrides = {},
+        dim_inactive = false,
+        transparent_mode = true,
+      })
+    end
+  },
+
+  {
+    'Shatur/neovim-ayu',
+    config = function()
+      require('ayu').setup({
+        overrides = {
+          Normal = { bg = "None" },
+          -- NormalFloat = { bg = "none" },
+          ColorColumn = { bg = "None" },
+          SignColumn = { bg = "None" },
+          -- Folded = { bg = "None" },
+          -- FoldColumn = { bg = "None" },
+          CursorLine = { bg = "None" },
+          CursorColumn = { bg = "None" },
+          -- VertSplit = { bg = "None" },
+        },
+      })
+    end
+  },
+
+  { 'sainnhe/gruvbox-material', config = function() end },
+
+  {
+    'rebelot/kanagawa.nvim',
+    config = function()
+      require('kanagawa').setup({
+        compile = false,  -- enable compiling the colorscheme
+        undercurl = true, -- enable undercurls
+        commentStyle = { italic = true },
+        functionStyle = {},
+        keywordStyle = { italic = true },
+        statementStyle = { bold = false },
+        typeStyle = { bold = false },
+        transparent = true,    -- do not set background color
+        dimInactive = false,   -- dim inactive window `:h hl-NormalNC`
+        terminalColors = true, -- define vim.g.terminal_color_{0,17}
+        colors = {             -- add/modify theme and palette colors
+          palette = {},
+          theme = { wave = {}, lotus = {}, dragon = {}, all = {} },
+        },
+        overrides = function(colors) -- add/modify highlights
+          return {}
+        end,
+        theme = "wave",  -- Load "wave" theme
+        background = {   -- map the value of 'background' option to a theme
+          dark = "wave", -- try "dragon" !
+          light = "lotus"
+        },
+      })
+    end
+  },
+
 }
