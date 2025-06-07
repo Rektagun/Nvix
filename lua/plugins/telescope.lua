@@ -1,18 +1,19 @@
 return {
   {
-    'nvim-telescope/telescope.nvim', tag = '0.1.8',
+    'nvim-telescope/telescope.nvim',
+    tag = '0.1.8',
     dependencies = { 'nvim-lua/plenary.nvim' },
     config = function()
       local telescope = require("telescope")
       local builtin = require('telescope.builtin')
       local actions = require("telescope.actions")
-      require('telescope').setup{
-        results_height = 20;
-        winblend = 20;
-        width = 0.8;
-        prompt_title = '';
-        prompt_prefix = 'Files>';
-        previewer = false;
+      require('telescope').setup {
+        results_height = 20,
+        winblend = 20,
+        width = 0.8,
+        prompt_title = '',
+        prompt_prefix = 'Files>',
+        previewer = false,
         defaults = {
           file_ignore_patterns = {}, -- Disable default file ignore patterns
           mappings = {
@@ -40,14 +41,11 @@ return {
       vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
       vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
 
-      vim.keymap.set('n', '<leader>fn', function ()
+      vim.keymap.set('n', '<leader>fn', function()
         require('telescope.builtin').find_files {
           cwd = vim.fn.stdpath("config")
         }
       end)
-
-
     end
   }
 }
-

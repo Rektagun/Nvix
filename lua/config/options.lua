@@ -7,8 +7,8 @@ vim.opt.signcolumn = "no"
 
 -- Line numbers
 vim.opt.number = true
-vim.opt.cursorcolumn = true
-vim.opt.cursorline = true
+vim.opt.cursorcolumn = false
+vim.opt.cursorline = false
 vim.opt.relativenumber = true
 
 vim.opt.clipboard = "unnamedplus"

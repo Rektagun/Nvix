@@ -23,4 +23,5 @@ require("lazy").setup({
     { import = "plugins" },
   },
   checker = { enabled = true },
+  flash = { enabled = true },
 })

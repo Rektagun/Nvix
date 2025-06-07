@@ -4,7 +4,7 @@ return {
   config = function()
     require("themery").setup({
 
-      themes = { 'rose-pine-moon', 'rose-pine-main', 'rose-pine-dawn', 'ayu', 'gruvbox', 'kanagawa-wave', 'kanagawa-dragon', 'kanagawa-lotus', 'gruvbox-material' },
+      themes = { 'rose-pine-moon', 'rose-pine-main', 'ayu', 'gruvbox', 'kanagawa-wave', 'kanagawa-dragon', 'gruvbox-material', 'melange' },
 
       livePreview = true, -- Apply theme while picking. Default to true.
     })

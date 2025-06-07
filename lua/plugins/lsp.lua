@@ -13,84 +13,33 @@ return {
     "L3MON4D3/LuaSnip",
     "saadparwaiz1/cmp_luasnip",
   },
-
   config = function()
     require('mason').setup {}
-    require("mason-lspconfig").setup {}
-
-    local capabilities = require('cmp_nvim_lsp').default_capabilities()
-    local lspconfig = require("lspconfig")
-
-    local htmlcapabilities = vim.lsp.protocol.make_client_capabilities()
-
-    capabilities.textDocument.completion.completionItem.snippetSupport = true
-
-    lspconfig.eslint.setup({
-      single_file_support = true,
-      capabilities = capabilities,
-      ft = { "javascript", "javascriptreact", "javascript.jsx", "typescript", "typescriptreact", "typescript.tsx", "vue", "svelte", "astro" },
-      on_attach = function(client, bufnr)
-        vim.api.nvim_create_autocmd("BufWritePre", {
-          buffer = bufnr,
-          command = "EslintFixAll",
-        })
-      end,
-    })
-
-
-    lspconfig.emmet_language_server.setup {
-      single_file_support = true,
-      capabilities = capabilities,
-      ft = { "css", "eruby", "html", "htmldjango", "javascriptreact", "less", "pug", "sass", "scss", "typescriptreact", "htmlangular" }
-    }
-
-
-    lspconfig.emmet_ls.setup {
-      single_file_support = true,
-      capabilities = capabilities,
-      ft = { "css", "eruby", "html", "htmldjango", "javascriptreact", "less", "pug", "sass", "scss", "typescriptreact", "htmlangular" }
-    }
-
-
-    lspconfig.bashls.setup {
-      single_file_support = true,
-      capabilities = capabilities,
-    }
-
-    lspconfig.tailwindcss.setup({
-      single_file_support = true,
-      capabilities = capabilities,
-    })
-
-    lspconfig.html.setup {
-      capabilities = htmlcapabilities,
-      single_file_support = true,
-    }
-
-    lspconfig.cssls.setup {
-      single_file_support = true,
-      capabilities = capabilities,
-    }
-
-    lspconfig.ts_ls.setup {
-      single_file_support = true,
-      capabilities = capabilities,
-      ft = { "css", "eruby", "html", "htmldjango", "javascriptreact", "less", "pug", "sass", "scss", "typescriptreact", "htmlangular" }
-    }
-
-    lspconfig.lua_ls.setup({
-      single_file_support = true,
-      capabilities = capabilities
-    })
-
-    lspconfig.vimls.setup({
-      single_file_support = true,
-      capabilities = capabilities
-    })
-
-    lspconfig.pyright.setup({
-      single_file_support = true,
-      capabilities = capabilities
+    require("mason-lspconfig").setup {
+      ensure_installed = { "bashls", "clangd", "cssls", "cssmodules_ls", "css_variables", "cypher_ls", "docker_compose_language_service", "dockerls", "eslint", "grammarly", "graphql", "html", "jsonls", "lua_ls", "nextls", "pylsp", "pyright", "tailwindcss", "ts_ls", "vimls", }, }
+    vim.lsp.config("*", {})
+    vim.lsp.enable({
+      "bashls",
+      "clangd",
+      "csharp_ls",
+      "cssls",
+      "cssmodules_ls",
+      "css_variables",
+      "cypher_ls",
+      "docker_compose_language_service",
+      "dockerls",
+      "eslint",
+      "grammarly",
+      "graphql",
+      "html",
+      "jsonls",
+      "lua_ls",
+      "nextls",
+      "pylsp",
+      "pyright",
+      "tailwindcss",
+      "ts_ls",
+      "vimls",
     })
   end
 }

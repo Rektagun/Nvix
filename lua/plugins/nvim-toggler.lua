@@ -27,6 +27,9 @@ return {
           ['and'] = 'or',
           ['And'] = 'Or',
           ['AND'] = 'OR',
+          ['light'] = 'dark',
+          ['Light'] = 'Dark',
+          ['sell'] = 'buy',
         },
 
         -- removes the default <leader>i keymap
