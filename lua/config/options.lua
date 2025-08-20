@@ -36,9 +36,10 @@ vim.opt.colorcolumn = '80'
 -- vim.opt.wrapmargin = 0
 
 -- Folding
-vim.opt.foldmethod = 'expr'
-vim.opt.foldexpr = 'nvim_treesitter#foldexpr()'
-vim.opt.foldenable = false
+vim.opt.foldmethod = 'manual'
+-- this is for when fold it set to "expr"
+-- vim.opt.foldexpr = 'nvim_treesitter#foldexpr()'
+-- vim.opt.foldenable = false
 
 -- Concealing
 vim.opt.conceallevel = 2
