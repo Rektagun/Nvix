@@ -12,46 +12,43 @@ return {
       "hrsh7th/vim-vsnip",
       "L3MON4D3/LuaSnip",
       "dcampos/nvim-snippy",
+      "windwp/nvim-autopairs",
       "saadparwaiz1/cmp_luasnip",
     },
 
     config = function()
+      local cmp_autopairs = require('nvim-autopairs.completion.cmp')
+      local cmp = require('cmp')
 
-      local cmp = require'cmp'
+      cmp.event:on(
+        'confirm_done',
+        cmp_autopairs.on_confirm_done()
+      )
+
       cmp.setup({
         snippet = {
-          -- REQUIRED - you must specify a snippet engine
           expand = function(args)
-            -- vim.fn["vsnip#anonymous"](args.body) -- For `vsnip` users.
-            require("vim-react-snippets").lazy_load()
-            -- require('luasnip').lsp_expand(args.body) -- For `luasnip` users.
-            -- require('snippy').expand_snippet(args.body) -- For `snippy` users.
-            -- vim.fn["UltiSnips#Anon"](args.body) -- For `ultisnips` users.
-            vim.snippet.expand(args.body) -- For native neovim snippets (Neovim v0.10+)
+            require('luasnip').lsp_expand(args.body) -- For `luasnip` users.
           end,
         },
         window = {
           completion = cmp.config.window.bordered(),
           documentation = cmp.config.window.bordered(),
         },
+
+
         mapping = cmp.mapping.preset.insert({
           ['<C-k>'] = cmp.mapping.select_prev_item(cmp_select),
           ['<C-j>'] = cmp.mapping.select_next_item(cmp_select),
-          -- ['<C-Space>'] = cmp.mapping.complete(),
           ['<CR>'] = cmp.mapping.confirm({ select = true }),
         }),
         sources = cmp.config.sources({
-          -- { name = 'vsnip' }, -- For vsnip users.
-          { name = 'nvim_lsp' },
-          -- { name = 'luasnip' }, -- For luasnip users.
-          { name = 'vim-react-snippets' },
-          -- { name = 'ultisnips' }, -- For ultisnips users.
-          -- { name = 'snippy' }, -- For snippy users.
-        }, {
-          { name = 'buffer' },
+          { name = 'luasnip', },
+          { name = 'nvim_lsp', },
+          { name = 'buffer', },
+          { name = 'path', },
         })
       })
-
       cmp.setup.filetype('gitcommit', {
         sources = cmp.config.sources({
           { name = 'git' },
@@ -59,14 +56,12 @@ return {
           { name = 'buffer' },
         })
       })
-
       cmp.setup.cmdline({ '/', '?' }, {
         mapping = cmp.mapping.preset.cmdline(),
         sources = {
           { name = 'buffer' }
         }
       })
-
       cmp.setup.cmdline('/', {
         mapping = cmp.mapping.preset.cmdline(),
         sources = cmp.config.sources({
@@ -78,4 +73,3 @@ return {
     end
   }
 }
-

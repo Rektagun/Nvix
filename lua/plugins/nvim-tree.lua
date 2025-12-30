@@ -4,7 +4,7 @@ return {
     dependencies = {
       "nvim-tree/nvim-web-devicons"
     },
-    config = function ()
+    config = function()
       -- Require the nvim-tree.lua plugin
       local nvim_tree = require("nvim-tree")
 
@@ -19,17 +19,17 @@ return {
           number = false,
           relativenumber = false,
           signcolumn = "no",
-          width = 30,
+          width = 50,
           float = {
             enable = true,
             quit_on_focus_loss = true,
             open_win_config = {
               relative = "editor",
               border = "rounded",
-              width = 96,
-              height = 18,
+              width = 124,
+              height = 25,
               row = 0,
-              col = 20,
+              col = 12,
             },
           },
         },
@@ -40,7 +40,7 @@ return {
             inline_arrows = true,
             icons = {
               corner = "└",
-              edge = "╎",
+              edge = "│",
               item = "├",
               bottom = "─",
               none = " ",
@@ -63,22 +63,20 @@ return {
             },
           },
         },
-        disable_netrw = true,  -- disable netrw completely
-        hijack_netrw = true,   -- hijack netrw window on startup
-        hijack_cursor = true,  -- put the cursor at the start of the filename when opening a file
-        update_cwd = true,     -- update the cwd of the tree when changing nvim's directory (DirChanged event)
+        disable_netrw = true, -- disable netrw completely
+        hijack_netrw = true,  -- hijack netrw window on startup
+        hijack_cursor = true, -- put the cursor at the start of the filename when opening a file
+        update_cwd = true,    -- update the cwd of the tree when changing nvim's directory (DirChanged event)
         update_focused_file = {
           enable = true,      -- update the focused file on `BufEnter`, un-collapses the folders recursively until it finds the file
           update_cwd = true,  -- automatically updates the cwd to the folder of the focused file
           ignore_list = {},   -- don't update cwd if the file is in this list (filetype): e.g. {"java","xml"}
         },
         system_open = {
-          cmd = nil,           -- custom command to open the treeview with a specifcally chosen file
-          args = {},           -- command arguments
+          cmd = nil, -- custom command to open the treeview with a specifcally chosen file
+          args = {}, -- command arguments
         },
       })
-
     end
   }
 }
-
