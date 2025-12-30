@@ -1,5 +1,47 @@
 return {
   {
+    "lalitmee/cobalt2.nvim",
+    event = { "ColorSchemePre" }, -- if you want to lazy load
+    dependencies = { "tjdevries/colorbuddy.nvim", tag = "v1.0.0" },
+    init = function()
+      require("colorbuddy").colorscheme("cobalt2")
+    end,
+  },
+  {
+    "metalelf0/jellybeans-nvim",
+    priority = 1000,
+    config = function()
+    end
+  },
+  {
+    "sainnhe/gruvbox-material",
+    priority = 1000,
+    config = function()
+    end
+  },
+  {
+    "rebelot/kanagawa.nvim",
+    priority = 1000,
+    config = function()
+      require('kanagawa').setup({
+        undercurl = false,
+        transparent = false,
+      })
+    end
+  },
+  {
+    "savq/melange-nvim",
+    priority = 1000,
+    config = function()
+    end
+  },
+  {
+    "morhetz/gruvbox",
+    priority = 1000,
+    config = function()
+    end
+  },
+  {
     "Mofiqul/vscode.nvim",
     priority = 1000,
     config = function()
@@ -24,11 +66,12 @@ return {
           legacy_highlights = true, -- Improve compatibility for previous versions of Neovim
           migrations = true,        -- Handle deprecated options automatically
         },
+        disable_background = true,
 
         styles = {
           bold = false,
           italic = true,
-          transparency = false,
+          transparency = true,
         },
 
         groups = {
@@ -71,8 +114,6 @@ return {
         before_highlight = function(group, highlight, palette)
         end,
       })
-
-      vim.cmd("colorscheme rose-pine")
     end
   }
 }

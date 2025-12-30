@@ -5,7 +5,17 @@ return {
       require('nvim-toggler').setup({
         -- your own inverses
         inverses = {
+          ['x'] = 'y',
+          ['Y'] = 'Y',
+          ['Row'] = 'Col',
           ['=='] = '!=',
+          ['+'] = '-',
+          ['Height'] = 'Width',
+          ['height'] = 'width',
+          ['h'] = 'w',
+          ['H'] = 'W',
+          ['X'] = 'Y',
+          ['Left'] = 'Right',
           ['vim'] = 'emacs',
           ['row'] = 'col',
           ['flex'] = 'grid',

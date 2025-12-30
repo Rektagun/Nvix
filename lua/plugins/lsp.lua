@@ -16,7 +16,7 @@ return {
   config = function()
     require('mason').setup {}
     require("mason-lspconfig").setup {
-      ensure_installed = { "bashls", "clangd", "cssls", "cssmodules_ls", "css_variables", "cypher_ls", "docker_compose_language_service", "dockerls", "eslint", "grammarly", "graphql", "jsonls", "lua_ls", "nextls", "pylsp", "pyright", "tailwindcss", "ts_ls", "vimls" }, }
+      ensure_installed = { "bashls", "jdtls", "clangd", "cssls", "cssmodules_ls", "css_variables", "cypher_ls", "docker_compose_language_service", "dockerls", "eslint", "grammarly", "graphql", "jsonls", "lua_ls", "nextls", "pylsp", "pyright", "tailwindcss", "ts_ls", "vimls" }, }
     vim.lsp.config("*", {
       vim.diagnostic.config({
         virtual_text = true,
@@ -31,6 +31,7 @@ return {
       "css_variables",
       -- "emmet_language_server",
       "cypher_ls",
+      "jdtls",
       "docker_compose_language_service",
       "dockerls",
       "eslint",
