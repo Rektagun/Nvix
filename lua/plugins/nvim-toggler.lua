@@ -6,7 +6,6 @@ return {
         -- your own inverses
         inverses = {
           ['x'] = 'y',
-          ['Y'] = 'Y',
           ['Row'] = 'Col',
           ['=='] = '!=',
           ['+'] = '-',
